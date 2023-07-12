@@ -1,0 +1,1631 @@
+{
+  "last_node_id": 188,
+  "last_link_id": 315,
+  "nodes": [
+    {
+      "id": 50,
+      "type": "CLIPTextEncodeSDXL",
+      "pos": [
+        154.48514531093747,
+        -53.92914010937491
+      ],
+      "size": {
+        "0": 210,
+        "1": 220.56224060058594
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 303
+        },
+        {
+          "name": "text_g",
+          "type": "STRING",
+          "link": 183,
+          "widget": {
+            "name": "text_g",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_G"
+              }
+            ]
+          },
+          "slot_index": 1
+        },
+        {
+          "name": "text_l",
+          "type": "STRING",
+          "link": 309,
+          "widget": {
+            "name": "text_l",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_L"
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            199
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXL"
+      },
+      "widgets_values": [
+        4096,
+        4096,
+        0,
+        0,
+        4096,
+        4096,
+        "ASCII graphics, female shodan app logo from system shock game",
+        "ASCII graphics, female shodan app logo from system shock game"
+      ]
+    },
+    {
+      "id": 65,
+      "type": "CLIPTextEncodeSDXL",
+      "pos": [
+        153.48514531093747,
+        211.07085989062492
+      ],
+      "size": {
+        "0": 210,
+        "1": 220.56224060058594
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 304
+        },
+        {
+          "name": "text_g",
+          "type": "STRING",
+          "link": 139,
+          "widget": {
+            "name": "text_g",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_G"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_l",
+          "type": "STRING",
+          "link": 308,
+          "widget": {
+            "name": "text_l",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_L"
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            200
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXL"
+      },
+      "widgets_values": [
+        4096,
+        4096,
+        0,
+        0,
+        4096,
+        4096,
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 165,
+      "type": "PrimitiveNode",
+      "pos": [
+        -331,
+        341
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            258
+          ],
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Steps",
+      "properties": {},
+      "widgets_values": [
+        24,
+        "fixed"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "EmptyLatentImage",
+      "pos": [
+        -331,
+        463
+      ],
+      "size": {
+        "0": 429.6268005371094,
+        "1": 106
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            246
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Image and batch size",
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ]
+    },
+    {
+      "id": 71,
+      "type": "CLIPTextEncodeSDXLRefiner",
+      "pos": [
+        152.94536438515624,
+        -798.5187320898431
+      ],
+      "size": {
+        "0": 235.53594970703125,
+        "1": 127.91792297363281
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 300
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 307,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            271
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXLRefiner"
+      },
+      "widgets_values": [
+        2.5,
+        4096,
+        4096,
+        ""
+      ]
+    },
+    {
+      "id": 168,
+      "type": "KSampler",
+      "pos": [
+        412.9453643851563,
+        -960.5187320898433
+      ],
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 269
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 270
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 271
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 312
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            295
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        234599425881476,
+        "randomize",
+        8,
+        6,
+        "dpmpp_2m",
+        "karras",
+        0.45
+      ]
+    },
+    {
+      "id": 139,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        405.48514531093724,
+        -54.92914010937491
+      ],
+      "size": {
+        "0": 315,
+        "1": 506
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 248
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 199
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 200
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 246
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 258,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          },
+          "slot_index": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            240
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "enable",
+        888325105041335,
+        "randomize",
+        24,
+        6,
+        "dpmpp_2m",
+        "karras",
+        0,
+        1000,
+        "disable"
+      ]
+    },
+    {
+      "id": 163,
+      "type": "VAEDecodeTiled",
+      "pos": [
+        500.9453643851565,
+        -386.5187320898433
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 295
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 256
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            291,
+            293
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "R2",
+      "properties": {
+        "Node name for S&R": "VAEDecodeTiled"
+      }
+    },
+    {
+      "id": 179,
+      "type": "LoadImage",
+      "pos": [
+        -757.7564744440859,
+        -958.0053141705648
+      ],
+      "size": [
+        315,
+        314.00000381469727
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "SDXL_0.9_Output_00001_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 70,
+      "type": "CLIPTextEncodeSDXLRefiner",
+      "pos": [
+        148.94536438515624,
+        -965.5187320898433
+      ],
+      "size": {
+        "0": 242.90916442871094,
+        "1": 126
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 299
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 306,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            270
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXLRefiner"
+      },
+      "widgets_values": [
+        6,
+        4096,
+        4096,
+        "ASCII graphics, female shodan app logo from system shock game"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "PrimitiveNode",
+      "pos": [
+        -331,
+        -475
+      ],
+      "size": {
+        "0": 425.57513427734375,
+        "1": 156.00054931640625
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            183
+          ],
+          "widget": {
+            "name": "text_g",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_G"
+              }
+            ]
+          },
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive Prompt G",
+      "properties": {},
+      "widgets_values": [
+        "ASCII graphics, female shodan app logo from system shock game"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 16,
+      "type": "PrimitiveNode",
+      "pos": [
+        -333,
+        -86
+      ],
+      "size": {
+        "0": 429.8749084472656,
+        "1": 171.60028076171875
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            139
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "text_g",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_G"
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Negative Prompt G",
+      "properties": {},
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 185,
+      "type": "PrimitiveNode",
+      "pos": [
+        -334,
+        127
+      ],
+      "size": {
+        "0": 429.6751403808594,
+        "1": 162.30055236816406
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            308
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "text_l",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_L"
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Negative Prompt L",
+      "properties": {},
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 184,
+      "type": "PrimitiveNode",
+      "pos": [
+        -330,
+        -279
+      ],
+      "size": {
+        "0": 426.775146484375,
+        "1": 153.90054321289062
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            309
+          ],
+          "widget": {
+            "name": "text_l",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_L"
+              }
+            ]
+          },
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive Prompt L",
+      "properties": {},
+      "widgets_values": [
+        "ASCII graphics, female shodan app logo from system shock game"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 182,
+      "type": "PrimitiveNode",
+      "pos": [
+        -336.88750351562527,
+        -956.7501199999981
+      ],
+      "size": {
+        "0": 433.23724365234375,
+        "1": 167.2466583251953
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            306
+          ],
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          },
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive Prompt",
+      "properties": {},
+      "widgets_values": [
+        "ASCII graphics, female shodan app logo from system shock game"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 183,
+      "type": "PrimitiveNode",
+      "pos": [
+        -334.19997558593764,
+        -749.2002197265622
+      ],
+      "size": {
+        "0": 429.5497131347656,
+        "1": 169.7967529296875
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            307
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Negative Prompt",
+      "properties": {},
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": [
+        757,
+        -1011
+      ],
+      "size": {
+        "0": 736.727783203125,
+        "1": 779.0560913085938
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 293
+        }
+      ],
+      "title": "Save Image - Refined (Connect to R2)",
+      "properties": {},
+      "widgets_values": [
+        "SDXL_0.9_Output"
+      ]
+    },
+    {
+      "id": 170,
+      "type": "SaveImage",
+      "pos": [
+        760,
+        -183
+      ],
+      "size": {
+        "0": 727.901123046875,
+        "1": 774.669677734375
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 305,
+          "slot_index": 0
+        }
+      ],
+      "title": "Save Image - Base (Connect to B1)",
+      "properties": {},
+      "widgets_values": [
+        "SDXL.0.9.Base.Output"
+      ]
+    },
+    {
+      "id": 181,
+      "type": "CLIPSetLastLayer",
+      "pos": [
+        -791,
+        -180
+      ],
+      "size": {
+        "0": 381.9359130859375,
+        "1": 58
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 302
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            303,
+            304
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPSetLastLayer"
+      },
+      "widgets_values": [
+        -1
+      ]
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -791,
+        -317
+      ],
+      "size": {
+        "0": 379.6711730957031,
+        "1": 98
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 1,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            248
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            302
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            247
+          ],
+          "slot_index": 2
+        }
+      ],
+      "title": "For Base",
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sdxl_base_pruned_no-ema.safetensors"
+      ]
+    },
+    {
+      "id": 180,
+      "type": "CLIPSetLastLayer",
+      "pos": [
+        -795,
+        -464
+      ],
+      "size": {
+        "0": 387.9359130859375,
+        "1": 58
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 298,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            299,
+            300
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPSetLastLayer"
+      },
+      "widgets_values": [
+        -1
+      ]
+    },
+    {
+      "id": 11,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -795.7564744440865,
+        -600.0053141705629
+      ],
+      "size": {
+        "0": 384.4734802246094,
+        "1": 98
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 1,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            269
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            298
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            256,
+            311
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "For Refiner",
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sdxl_refiner_pruned_no-ema.safetensors"
+      ]
+    },
+    {
+      "id": 178,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        1176,
+        -1109
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 1,
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            287,
+            313
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x-UltraSharp.pth"
+      ]
+    },
+    {
+      "id": 162,
+      "type": "VAEDecodeTiled",
+      "pos": [
+        421.48514531093724,
+        512.0708598906245
+      ],
+      "size": {
+        "0": 285.6000061035156,
+        "1": 46
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 240
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 247
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            305,
+            314
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "B1 - Connect to R1 to refine image",
+      "properties": {
+        "Node name for S&R": "VAEDecodeTiled"
+      }
+    },
+    {
+      "id": 187,
+      "type": "VAEEncode",
+      "pos": [
+        150,
+        -581
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 310
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 311
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            312
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      }
+    },
+    {
+      "id": 177,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        756,
+        -1101
+      ],
+      "size": {
+        "0": 369.6000061035156,
+        "1": 46
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 287
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 291
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Connect to \"Save Image - Refined\" to Upscale",
+      "properties": {
+        "Node name for S&R": "ImageUpscaleWithModel"
+      }
+    },
+    {
+      "id": 188,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        151,
+        -381
+      ],
+      "size": [
+        319.20001220703125,
+        46
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 313
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 314
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            315
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "R1 - Connect \"Load Image\" to Refine it",
+      "properties": {
+        "Node name for S&R": "ImageUpscaleWithModel"
+      }
+    },
+    {
+      "id": 176,
+      "type": "ImageScaleBy",
+      "pos": [
+        151,
+        -499
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 315,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            310
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleBy"
+      },
+      "widgets_values": [
+        "bicubic",
+        0.5
+      ]
+    }
+  ],
+  "links": [
+    [
+      139,
+      16,
+      0,
+      65,
+      1,
+      "STRING"
+    ],
+    [
+      183,
+      15,
+      0,
+      50,
+      1,
+      "STRING"
+    ],
+    [
+      199,
+      50,
+      0,
+      139,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      200,
+      65,
+      0,
+      139,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      240,
+      139,
+      0,
+      162,
+      0,
+      "LATENT"
+    ],
+    [
+      246,
+      5,
+      0,
+      139,
+      3,
+      "LATENT"
+    ],
+    [
+      247,
+      4,
+      2,
+      162,
+      1,
+      "VAE"
+    ],
+    [
+      248,
+      4,
+      0,
+      139,
+      0,
+      "MODEL"
+    ],
+    [
+      256,
+      11,
+      2,
+      163,
+      1,
+      "VAE"
+    ],
+    [
+      258,
+      165,
+      0,
+      139,
+      4,
+      "INT"
+    ],
+    [
+      269,
+      11,
+      0,
+      168,
+      0,
+      "MODEL"
+    ],
+    [
+      270,
+      70,
+      0,
+      168,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      271,
+      71,
+      0,
+      168,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      287,
+      178,
+      0,
+      177,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      291,
+      163,
+      0,
+      177,
+      1,
+      "IMAGE"
+    ],
+    [
+      293,
+      163,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      295,
+      168,
+      0,
+      163,
+      0,
+      "LATENT"
+    ],
+    [
+      298,
+      11,
+      1,
+      180,
+      0,
+      "CLIP"
+    ],
+    [
+      299,
+      180,
+      0,
+      70,
+      0,
+      "CLIP"
+    ],
+    [
+      300,
+      180,
+      0,
+      71,
+      0,
+      "CLIP"
+    ],
+    [
+      302,
+      4,
+      1,
+      181,
+      0,
+      "CLIP"
+    ],
+    [
+      303,
+      181,
+      0,
+      50,
+      0,
+      "CLIP"
+    ],
+    [
+      304,
+      181,
+      0,
+      65,
+      0,
+      "CLIP"
+    ],
+    [
+      305,
+      162,
+      0,
+      170,
+      0,
+      "IMAGE"
+    ],
+    [
+      306,
+      182,
+      0,
+      70,
+      1,
+      "STRING"
+    ],
+    [
+      307,
+      183,
+      0,
+      71,
+      1,
+      "STRING"
+    ],
+    [
+      308,
+      185,
+      0,
+      65,
+      2,
+      "STRING"
+    ],
+    [
+      309,
+      184,
+      0,
+      50,
+      2,
+      "STRING"
+    ],
+    [
+      310,
+      176,
+      0,
+      187,
+      0,
+      "IMAGE"
+    ],
+    [
+      311,
+      11,
+      2,
+      187,
+      1,
+      "VAE"
+    ],
+    [
+      312,
+      187,
+      0,
+      168,
+      3,
+      "LATENT"
+    ],
+    [
+      313,
+      178,
+      0,
+      188,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      314,
+      162,
+      0,
+      188,
+      1,
+      "IMAGE"
+    ],
+    [
+      315,
+      188,
+      0,
+      176,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Base Stage",
+      "bounding": [
+        137,
+        -135,
+        604,
+        723
+      ],
+      "color": "#3f789e"
+    },
+    {
+      "title": "Refiner Stage",
+      "bounding": [
+        134,
+        -1040,
+        608,
+        715
+      ],
+      "color": "#3f789e"
+    },
+    {
+      "title": "Input for Base Stage",
+      "bounding": [
+        -353,
+        -552,
+        469,
+        1138
+      ],
+      "color": "#3f789e"
+    },
+    {
+      "title": "Models",
+      "bounding": [
+        -829,
+        -1041,
+        463,
+        936
+      ],
+      "color": "#3f789e"
+    },
+    {
+      "title": "Input for Refine Stage",
+      "bounding": [
+        -354,
+        -1040,
+        468,
+        477
+      ],
+      "color": "#3f789e"
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

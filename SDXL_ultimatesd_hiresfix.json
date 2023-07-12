@@ -1,0 +1,6727 @@
+{
+  "last_node_id": 165,
+  "last_link_id": 260,
+  "nodes": [
+    {
+      "id": 54,
+      "type": "Note",
+      "pos": [
+        -106.02538804188826,
+        -265.8471043871347
+      ],
+      "size": {
+        "0": 408.1121826171875,
+        "1": 560.35400390625
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 0,
+      "mode": 0,
+      "title": "Basic Prompting Guide",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Prompting: For the linguistic prompt, you should try to explain the image you want in a single sentence with proper grammar. For example:\n\nA photograph of a (subject) in a (location) at (time)\n\nthen you use the second text field to strengthen that prompt with a few carefully selected tags that will help, such as:\n\ncinematic, bokeh, photograph, (features about subject)\n\nFull prompt example:\n\nLinguistic: A cinematic photograph of a pretty woman with blonde hair and blue eyes in a park at sunset\n\nSupporting: clouds, nature, bokeh, f1.8, cinematic lighting, entered composition\n\nPhotographic tips\n\n1. Try and use words or entities that tie into realistic imagery, such as National geographic, Vogue, ethnographic, portrait, and similar words\n\n2. Do not use words like \"realism\" or \"realistic\" when prompting for photographs, as they are associated with art styles that depict \"realistic\" things, and such will weight towards traditional or digital art\n\n3. Feel free to use compositional words, such as \"centered subject\" or \"(object) to the side\", this can help a lot for achieving different and interesting results\n\n4. I recommend not going over 6 on the positive aesthetic score for the refiner when going for realism, I find that the higher you go, the more your images are likely to go into the direction of aesthetic paintings and \n\n\n\n\nCredit for Prompting Guide: u/ScythSergal"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 8,
+      "type": "Text box",
+      "pos": [
+        336.6924986768613,
+        79.22158892341142
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            7
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Supporting Keywords",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "cinematic, fujifilm, facing camera, young, snowstorm, photograph, fur coat"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 64,
+      "type": "Evaluate Floats",
+      "pos": [
+        726.702890253708,
+        2029.319901417941
+      ],
+      "size": {
+        "0": 210,
+        "1": 146
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "FLOAT",
+          "link": 47,
+          "widget": {
+            "name": "a",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        },
+        {
+          "name": "b",
+          "type": "FLOAT",
+          "link": 40,
+          "widget": {
+            "name": "b",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            48,
+            59
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            53
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Calc Base End Steps",
+      "properties": {
+        "Node name for S&R": "Evaluate Floats"
+      },
+      "widgets_values": [
+        "a * b",
+        "False",
+        0,
+        0.65,
+        0
+      ]
+    },
+    {
+      "id": 68,
+      "type": "Evaluate Floats",
+      "pos": [
+        726.702890253708,
+        2117.319901417939
+      ],
+      "size": [
+        315,
+        194
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 66,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "FLOAT",
+          "link": 49,
+          "widget": {
+            "name": "a",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        },
+        {
+          "name": "b",
+          "type": "FLOAT",
+          "link": 57,
+          "widget": {
+            "name": "b",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        },
+        {
+          "name": "c",
+          "type": "FLOAT",
+          "link": 53,
+          "widget": {
+            "name": "c",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            60
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Calc Offset Steps",
+      "properties": {
+        "Node name for S&R": "Evaluate Floats"
+      },
+      "widgets_values": [
+        "a * (b - c)",
+        "False",
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 70,
+      "type": "Evaluate Integers",
+      "pos": [
+        921.248444674869,
+        2029.319901417941
+      ],
+      "size": [
+        315,
+        194
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 70,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 59,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -48000,
+                "max": 48000,
+                "step": 1
+              }
+            ]
+          }
+        },
+        {
+          "name": "b",
+          "type": "INT",
+          "link": 60,
+          "widget": {
+            "name": "b",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -48000,
+                "max": 48000,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            61
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Calc Refiner Start Steps",
+      "properties": {
+        "Node name for S&R": "Evaluate Integers"
+      },
+      "widgets_values": [
+        "a - b",
+        "False",
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 63,
+      "type": "EmptyLatentImage",
+      "pos": [
+        381.2484446748712,
+        2030.319901417941
+      ],
+      "size": [
+        315,
+        106
+      ],
+      "flags": {},
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 76,
+          "widget": {
+            "name": "width",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 64,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          },
+          "slot_index": 0
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 78,
+          "widget": {
+            "name": "height",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "min": 64,
+                "max": 8192,
+                "step": 8
+              }
+            ]
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            31
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        512,
+        512,
+        1
+      ]
+    },
+    {
+      "id": 25,
+      "type": "PrimitiveNode",
+      "pos": [
+        378.22176737502537,
+        1085.240295115876
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            77
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -48000,
+                "max": 48000,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "title": "txt2img Height",
+      "properties": {},
+      "widgets_values": [
+        1024,
+        "fixed"
+      ]
+    },
+    {
+      "id": 37,
+      "type": "PrimitiveNode",
+      "pos": [
+        378.574281046898,
+        954.0962807115881
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            72
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -48000,
+                "max": 48000,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "title": "txt2img Width",
+      "properties": {},
+      "widgets_values": [
+        1024,
+        "fixed"
+      ]
+    },
+    {
+      "id": 27,
+      "type": "PrimitiveNode",
+      "pos": [
+        839.5742810468985,
+        1085.0962807115816
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            188
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "ascore",
+            "config": [
+              "FLOAT",
+              {
+                "default": 6,
+                "min": 0,
+                "max": 1000,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "title": "txt2img Positive A Score",
+      "properties": {},
+      "widgets_values": [
+        6,
+        "fixed"
+      ]
+    },
+    {
+      "id": 82,
+      "type": "Evaluate Floats",
+      "pos": [
+        1646,
+        1467.278071150142
+      ],
+      "size": [
+        315,
+        194
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "FLOAT",
+          "link": 115,
+          "widget": {
+            "name": "a",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            116
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Convert Scale",
+      "properties": {
+        "Node name for S&R": "Evaluate Floats"
+      },
+      "widgets_values": [
+        "a",
+        "False",
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 41,
+      "type": "PrimitiveNode",
+      "pos": [
+        1420.5451173450613,
+        953.788137800547
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            107,
+            109,
+            115
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "a",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Ultimate SD Scale",
+      "properties": {},
+      "widgets_values": [
+        2,
+        "fixed"
+      ]
+    },
+    {
+      "id": 48,
+      "type": "PrimitiveNode",
+      "pos": [
+        1649.2106086170324,
+        826.2780711501551
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "links": [
+            120
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        }
+      ],
+      "title": "Ultimate SD Sampler",
+      "properties": {},
+      "widgets_values": [
+        "dpmpp_2m_sde_gpu",
+        "fixed"
+      ]
+    },
+    {
+      "id": 42,
+      "type": "PrimitiveNode",
+      "pos": [
+        1649.545117345062,
+        953.788137800547
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "links": [
+            121
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        }
+      ],
+      "title": "Ultimate SD Scheduler",
+      "properties": {},
+      "widgets_values": [
+        "karras",
+        "fixed"
+      ]
+    },
+    {
+      "id": 57,
+      "type": "PrimitiveNode",
+      "pos": [
+        1878.3816390735747,
+        826.6596668532824
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            123
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "ascore",
+            "config": [
+              "FLOAT",
+              {
+                "default": 6,
+                "min": 0,
+                "max": 1000,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Ultimate SD Pos A Score",
+      "properties": {},
+      "widgets_values": [
+        6,
+        "fixed"
+      ]
+    },
+    {
+      "id": 95,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        2229.2160274479074,
+        1650.5370351328181
+      ],
+      "size": {
+        "0": 226.8000030517578,
+        "1": 46
+      },
+      "flags": {},
+      "order": 80,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 135
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 134
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            132
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageUpscaleWithModel"
+      }
+    },
+    {
+      "id": 6,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        -68.94670524477038,
+        1572.8025455879579
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            106,
+            135
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x_UniversalUpscalerV2-Neutral_115000_swaG.pth"
+      ]
+    },
+    {
+      "id": 49,
+      "type": "KSampler",
+      "pos": [
+        2228.599610779652,
+        1389.3283740446839
+      ],
+      "size": {
+        "0": 210,
+        "1": 214
+      },
+      "flags": {},
+      "order": 85,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 130
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 180,
+          "slot_index": 1
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 181
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 137
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 142,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 143,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 147,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 144,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "link": 145,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 146,
+          "widget": {
+            "name": "denoise",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            138
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        99435935703771,
+        "randomize",
+        60,
+        8,
+        "dpmpp_2m_sde_gpu",
+        "karras",
+        0.3
+      ]
+    },
+    {
+      "id": 99,
+      "type": "VAEDecodeTiled",
+      "pos": [
+        2467,
+        1387.7987505002195
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 86,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 138
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 139
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            140
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecodeTiled"
+      }
+    },
+    {
+      "id": 88,
+      "type": "PrimitiveNode",
+      "pos": [
+        2229.8862617457353,
+        1085.8368315312534
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            143
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Hires. Fix Steps",
+      "properties": {},
+      "widgets_values": [
+        60,
+        "fixed"
+      ]
+    },
+    {
+      "id": 97,
+      "type": "VAEEncodeTiled",
+      "pos": [
+        2228.6532683245123,
+        1879.9088243115318
+      ],
+      "size": [
+        228.66091480409432,
+        46
+      ],
+      "flags": {},
+      "order": 84,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 133
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 136
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            137
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncodeTiled"
+      }
+    },
+    {
+      "id": 100,
+      "type": "Evaluate Floats",
+      "pos": [
+        2467,
+        1519.0962807115768
+      ],
+      "size": [
+        210,
+        170
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "c",
+          "type": "FLOAT",
+          "link": 149,
+          "widget": {
+            "name": "c",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            148
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Calculated Scale Factor",
+      "properties": {
+        "Node name for S&R": "Evaluate Floats"
+      },
+      "widgets_values": [
+        "1 / (4 / c)",
+        "False",
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": 75,
+      "type": "Evaluate Integers",
+      "pos": [
+        921.248444674869,
+        2114.3162393085604
+      ],
+      "size": [
+        315,
+        194
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 72,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -48000,
+                "max": 48000,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            76
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            108,
+            150
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Convert Width",
+      "properties": {
+        "Node name for S&R": "Evaluate Integers"
+      },
+      "widgets_values": [
+        "a",
+        "False",
+        1024,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 87,
+      "type": "PrimitiveNode",
+      "pos": [
+        2230.8862617457353,
+        954.8368315312595
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            149,
+            151,
+            155
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "c",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Hires. Fix Scale",
+      "properties": {},
+      "widgets_values": [
+        2,
+        "fixed"
+      ]
+    },
+    {
+      "id": 105,
+      "type": "Evaluate Floats",
+      "pos": [
+        2467,
+        1606.096280711577
+      ],
+      "size": {
+        "0": 315,
+        "1": 194
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "FLOAT",
+          "link": 154,
+          "widget": {
+            "name": "a",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        },
+        {
+          "name": "b",
+          "type": "FLOAT",
+          "link": 155,
+          "widget": {
+            "name": "b",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            156,
+            157
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Calculate Height",
+      "properties": {
+        "Node name for S&R": "Evaluate Floats"
+      },
+      "widgets_values": [
+        "a * b",
+        "False",
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "id": 7,
+      "type": "Text box",
+      "pos": [
+        336.6924986768613,
+        -266.7784110765873
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            6,
+            12,
+            93,
+            125,
+            158
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Main Prompt",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "A cinematic photograph of a young girl in a fur coat during a snowstorm"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 93,
+      "type": "PrimitiveNode",
+      "pos": [
+        2686.4374310660664,
+        954.4552266754814
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            160
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "ascore",
+            "config": [
+              "FLOAT",
+              {
+                "default": 6,
+                "min": 0,
+                "max": 1000,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Hires. Fix Pos A Score",
+      "properties": {},
+      "widgets_values": [
+        6,
+        "fixed"
+      ]
+    },
+    {
+      "id": 94,
+      "type": "PrimitiveNode",
+      "pos": [
+        2685.4374310660664,
+        1085.455226675479
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            161
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "ascore",
+            "config": [
+              "FLOAT",
+              {
+                "default": 6,
+                "min": 0,
+                "max": 1000,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Hires. Fix Neg A Score",
+      "properties": {},
+      "widgets_values": [
+        1,
+        "fixed"
+      ]
+    },
+    {
+      "id": 56,
+      "type": "PrimitiveNode",
+      "pos": [
+        1878.7161478016037,
+        954.1697335036736
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            124
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "ascore",
+            "config": [
+              "FLOAT",
+              {
+                "default": 6,
+                "min": 0,
+                "max": 1000,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Ultimate SD Neg A Score",
+      "properties": {},
+      "widgets_values": [
+        1,
+        "fixed"
+      ]
+    },
+    {
+      "id": 89,
+      "type": "PrimitiveNode",
+      "pos": [
+        2461.304891287492,
+        826.0962807115898
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "links": [
+            144
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        }
+      ],
+      "title": "Hires. Fix Sampler",
+      "properties": {},
+      "widgets_values": [
+        "dpmpp_2m_sde_gpu",
+        "fixed"
+      ]
+    },
+    {
+      "id": 90,
+      "type": "PrimitiveNode",
+      "pos": [
+        2460.060099629857,
+        954.185878112177
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "links": [
+            145
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        }
+      ],
+      "title": "Hires. Fix Scheduler",
+      "properties": {},
+      "widgets_values": [
+        "karras",
+        "fixed"
+      ]
+    },
+    {
+      "id": 76,
+      "type": "Evaluate Integers",
+      "pos": [
+        921.248444674869,
+        2158.3162393085645
+      ],
+      "size": {
+        "0": 315,
+        "1": 194
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 77,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -48000,
+                "max": 48000,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            78
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            110,
+            154
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Convert Height",
+      "properties": {
+        "Node name for S&R": "Evaluate Integers"
+      },
+      "widgets_values": [
+        "a",
+        "False",
+        1024,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 106,
+      "type": "Evaluate Strings",
+      "pos": [
+        726.702890253708,
+        2155.3162393085636
+      ],
+      "size": [
+        315,
+        154
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "b",
+          "type": "STRING",
+          "link": 162,
+          "widget": {
+            "name": "b",
+            "config": [
+              "STRING",
+              {
+                "default": " World",
+                "multiline": false
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            163
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "txt2img Save Prefix",
+      "properties": {
+        "Node name for S&R": "Evaluate Strings"
+      },
+      "widgets_values": [
+        "a + b",
+        "False",
+        "txt2img_",
+        " World",
+        ""
+      ]
+    },
+    {
+      "id": 36,
+      "type": "PrimitiveNode",
+      "pos": [
+        1649.1517411853943,
+        1084.5551421950672
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            122
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Ultimate SD CFG",
+      "properties": {},
+      "widgets_values": [
+        6,
+        "fixed"
+      ]
+    },
+    {
+      "id": 101,
+      "type": "CLIPTextEncodeSDXLRefiner",
+      "pos": [
+        2228.304891287492,
+        1231.0962807115777
+      ],
+      "size": {
+        "0": 210,
+        "1": 114
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 178,
+          "slot_index": 0
+        },
+        {
+          "name": "ascore",
+          "type": "FLOAT",
+          "link": 160,
+          "widget": {
+            "name": "ascore",
+            "config": [
+              "FLOAT",
+              {
+                "default": 6,
+                "min": 0,
+                "max": 1000,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 152,
+          "widget": {
+            "name": "width",
+            "config": [
+              "INT",
+              {
+                "default": 1024,
+                "min": 0,
+                "max": 8192
+              }
+            ]
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 156,
+          "widget": {
+            "name": "height",
+            "config": [
+              "INT",
+              {
+                "default": 1024,
+                "min": 0,
+                "max": 8192
+              }
+            ]
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 158,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            180
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Refiner)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXLRefiner"
+      },
+      "widgets_values": [
+        6,
+        1024,
+        1024,
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 102,
+      "type": "CLIPTextEncodeSDXLRefiner",
+      "pos": [
+        2459.304891287492,
+        1231.0962807115777
+      ],
+      "size": {
+        "0": 210,
+        "1": 114
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 64,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 179
+        },
+        {
+          "name": "ascore",
+          "type": "FLOAT",
+          "link": 161,
+          "widget": {
+            "name": "ascore",
+            "config": [
+              "FLOAT",
+              {
+                "default": 6,
+                "min": 0,
+                "max": 1000,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 153,
+          "widget": {
+            "name": "width",
+            "config": [
+              "INT",
+              {
+                "default": 1024,
+                "min": 0,
+                "max": 8192
+              }
+            ]
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 157,
+          "widget": {
+            "name": "height",
+            "config": [
+              "INT",
+              {
+                "default": 1024,
+                "min": 0,
+                "max": 8192
+              }
+            ]
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 159,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            181
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Refiner)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXLRefiner"
+      },
+      "widgets_values": [
+        1,
+        1024,
+        1024,
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 38,
+      "type": "PrimitiveNode",
+      "pos": [
+        610.615143534688,
+        954.4732907213562
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            40
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "b",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "title": "txt2img Base %",
+      "properties": {},
+      "widgets_values": [
+        0.65,
+        "fixed"
+      ]
+    },
+    {
+      "id": 107,
+      "type": "Image Save",
+      "pos": [
+        758.9746119581106,
+        -267.8471043871347
+      ],
+      "size": [
+        634.5549105602903,
+        944.9607372162508
+      ],
+      "flags": {},
+      "order": 81,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 172,
+          "slot_index": 0
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": 163,
+          "widget": {
+            "name": "filename_prefix",
+            "config": [
+              "STRING",
+              {
+                "default": "ComfyUI"
+              }
+            ]
+          }
+        }
+      ],
+      "title": "txt2img",
+      "properties": {
+        "Node name for S&R": "Image Save"
+      },
+      "widgets_values": [
+        "[time(%Y-%m-%d)]",
+        "ComfyUI",
+        "_",
+        4,
+        "png",
+        100,
+        "false",
+        "false",
+        "false",
+        "true",
+        "true",
+        "true"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "Image Save",
+      "pos": [
+        1432.677229859596,
+        -268.95512593827686
+      ],
+      "size": [
+        636.9271297958933,
+        945.5985756628605
+      ],
+      "flags": {},
+      "order": 82,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 98
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": 169,
+          "widget": {
+            "name": "filename_prefix",
+            "config": [
+              "STRING",
+              {
+                "default": "ComfyUI"
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Ultimate SD Upscale",
+      "properties": {
+        "Node name for S&R": "Image Save"
+      },
+      "widgets_values": [
+        "[time(%Y-%m-%d)]",
+        "ComfyUI",
+        "_",
+        4,
+        "png",
+        100,
+        "false",
+        "false",
+        "false",
+        "true",
+        "true",
+        "true"
+      ]
+    },
+    {
+      "id": 58,
+      "type": "Image Save",
+      "pos": [
+        2105.3979759696963,
+        -269.90198724632256
+      ],
+      "size": [
+        637.6130481566502,
+        947.735059277307
+      ],
+      "flags": {},
+      "order": 87,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 140
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": 168,
+          "widget": {
+            "name": "filename_prefix",
+            "config": [
+              "STRING",
+              {
+                "default": "ComfyUI"
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Hires. Fix",
+      "properties": {
+        "Node name for S&R": "Image Save"
+      },
+      "widgets_values": [
+        "[time(%Y-%m-%d)]",
+        "ComfyUI",
+        "_",
+        4,
+        "png",
+        100,
+        "false",
+        "false",
+        "false",
+        "true",
+        "true",
+        "true"
+      ]
+    },
+    {
+      "id": 35,
+      "type": "PrimitiveNode",
+      "pos": [
+        1420.1517411853931,
+        1084.5551421950672
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            117
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Ultimate SD Steps",
+      "properties": {},
+      "widgets_values": [
+        30,
+        "fixed"
+      ]
+    },
+    {
+      "id": 40,
+      "type": "PrimitiveNode",
+      "pos": [
+        1066.908789774916,
+        954.6063473619816
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            190
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        }
+      ],
+      "title": "txt2img Base CFG",
+      "properties": {},
+      "widgets_values": [
+        7.5,
+        "fixed"
+      ]
+    },
+    {
+      "id": 34,
+      "type": "PrimitiveNode",
+      "pos": [
+        1066.5154136152491,
+        1085.373351756502
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            189
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        }
+      ],
+      "title": "txt2img Refiner CFG",
+      "properties": {},
+      "widgets_values": [
+        7.5,
+        "fixed"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "PrimitiveNode",
+      "pos": [
+        610.5742810468984,
+        1085.0962807115816
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            49
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "a",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "title": "txt2img Offset Step %",
+      "properties": {},
+      "widgets_values": [
+        0,
+        "fixed"
+      ]
+    },
+    {
+      "id": 44,
+      "type": "PrimitiveNode",
+      "pos": [
+        610.5742810468984,
+        827.0962807115898
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            45
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -48000,
+                "max": 48000,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "title": "txt2img Steps",
+      "properties": {},
+      "widgets_values": [
+        20,
+        "fixed"
+      ]
+    },
+    {
+      "id": 45,
+      "type": "PrimitiveNode",
+      "pos": [
+        839.2152274580269,
+        826.7738400377639
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "links": [
+            84,
+            85
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        }
+      ],
+      "title": "txt2img Sampler",
+      "properties": {},
+      "widgets_values": [
+        "ddim",
+        "fixed"
+      ]
+    },
+    {
+      "id": 39,
+      "type": "PrimitiveNode",
+      "pos": [
+        839.6151435346894,
+        954.4732907213562
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "links": [
+            86,
+            87
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        }
+      ],
+      "title": "txt2img Scheduler",
+      "properties": {},
+      "widgets_values": [
+        "ddim_uniform",
+        "fixed"
+      ]
+    },
+    {
+      "id": 46,
+      "type": "PrimitiveNode",
+      "pos": [
+        1066,
+        827
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            187
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "ascore",
+            "config": [
+              "FLOAT",
+              {
+                "default": 6,
+                "min": 0,
+                "max": 1000,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "title": "txt2img Negative A Score",
+      "properties": {},
+      "widgets_values": [
+        1,
+        "fixed"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        731.7028902537082,
+        1648.3162393085636
+      ],
+      "size": [
+        315,
+        334
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 75,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 21
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 175
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 174,
+          "slot_index": 2
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 173,
+          "slot_index": 3
+        },
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "link": 68,
+          "widget": {
+            "name": "noise_seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 191,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 189,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 85,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "link": 87,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "start_at_step",
+          "type": "INT",
+          "link": 61,
+          "widget": {
+            "name": "start_at_step",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "end_at_step",
+          "type": "INT",
+          "link": 192,
+          "widget": {
+            "name": "end_at_step",
+            "config": [
+              "INT",
+              {
+                "default": 10000,
+                "min": 0,
+                "max": 10000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            171
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Refiner Model",
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "disable",
+        1102393959322924,
+        "randomize",
+        20,
+        7.5,
+        "ddim",
+        "ddim_uniform",
+        0,
+        10000,
+        "disable"
+      ]
+    },
+    {
+      "id": 65,
+      "type": "Evaluate Integers",
+      "pos": [
+        726.702890253708,
+        2071.2199585969865
+      ],
+      "size": [
+        315,
+        194
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 45,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -48000,
+                "max": 48000,
+                "step": 1
+              }
+            ]
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            46,
+            191,
+            192
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            47,
+            57
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Convert Steps to Float",
+      "properties": {
+        "Node name for S&R": "Evaluate Integers"
+      },
+      "widgets_values": [
+        "a",
+        "False",
+        20,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 23,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -69.94670524477037,
+        1429.8025455879674
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            21,
+            102,
+            130
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            176,
+            178,
+            179,
+            182,
+            183,
+            185
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            25,
+            105,
+            136,
+            139
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd_xl_refiner_0.9.safetensors"
+      ]
+    },
+    {
+      "id": 24,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -69.94670524477037,
+        1286.8025455879692
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            18
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            186,
+            197
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            26
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd_xl_base_0.9.safetensors"
+      ]
+    },
+    {
+      "id": 62,
+      "type": "VAEDecode",
+      "pos": [
+        614,
+        1486
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 69,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 170
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 14,
+      "type": "VAEDecode",
+      "pos": [
+        613,
+        1568
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 78,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 171
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            30,
+            134,
+            172
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 96,
+      "type": "ImageScaleBy",
+      "pos": [
+        2227.6532683245123,
+        1749.9088243115339
+      ],
+      "size": [
+        228.84954593688815,
+        78
+      ],
+      "flags": {},
+      "order": 83,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 132
+        },
+        {
+          "name": "scale_by",
+          "type": "FLOAT",
+          "link": 148,
+          "widget": {
+            "name": "scale_by",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0.01,
+                "max": 8,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            133
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleBy"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        0.5
+      ]
+    },
+    {
+      "id": 55,
+      "type": "PrimitiveNode",
+      "pos": [
+        1878.322771641936,
+        1084.9367378981908
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            127
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "denoise",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Ultimate SD Denoise",
+      "properties": {},
+      "widgets_values": [
+        0.4,
+        "fixed"
+      ]
+    },
+    {
+      "id": 91,
+      "type": "PrimitiveNode",
+      "pos": [
+        2459.060099629857,
+        1085.1858781121728
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            146
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "denoise",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Hires. Fix Denoise",
+      "properties": {},
+      "widgets_values": [
+        0.3,
+        "fixed"
+      ]
+    },
+    {
+      "id": 92,
+      "type": "PrimitiveNode",
+      "pos": [
+        2687.6822227237008,
+        826.3656292748942
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            147
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Hires. Fix CFG",
+      "properties": {},
+      "widgets_values": [
+        8,
+        "fixed"
+      ]
+    },
+    {
+      "id": 103,
+      "type": "Evaluate Floats",
+      "pos": [
+        2467,
+        1562
+      ],
+      "size": [
+        315,
+        194
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "FLOAT",
+          "link": 150,
+          "widget": {
+            "name": "a",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        },
+        {
+          "name": "b",
+          "type": "FLOAT",
+          "link": 151,
+          "widget": {
+            "name": "b",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            152,
+            153
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Calculate Width",
+      "properties": {
+        "Node name for S&R": "Evaluate Floats"
+      },
+      "widgets_values": [
+        "a * b",
+        "False",
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "id": 79,
+      "type": "CLIPTextEncodeSDXLRefiner",
+      "pos": [
+        1649,
+        1231
+      ],
+      "size": [
+        218.39999389648438,
+        122
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 62,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 182
+        },
+        {
+          "name": "ascore",
+          "type": "FLOAT",
+          "link": 124,
+          "widget": {
+            "name": "ascore",
+            "config": [
+              "FLOAT",
+              {
+                "default": 6,
+                "min": 0,
+                "max": 1000,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 126,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 202,
+          "widget": {
+            "name": "width",
+            "config": [
+              "INT",
+              {
+                "default": 1024,
+                "min": 0,
+                "max": 8192
+              }
+            ]
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 204,
+          "widget": {
+            "name": "height",
+            "config": [
+              "INT",
+              {
+                "default": 1024,
+                "min": 0,
+                "max": 8192
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            104
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Refiner)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXLRefiner"
+      },
+      "widgets_values": [
+        1,
+        4096,
+        4096,
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 52,
+      "type": "CLIPTextEncodeSDXLRefiner",
+      "pos": [
+        1421.2106086170322,
+        1231.278071150143
+      ],
+      "size": [
+        218.39999389648438,
+        122
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 61,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 176
+        },
+        {
+          "name": "ascore",
+          "type": "FLOAT",
+          "link": 123,
+          "widget": {
+            "name": "ascore",
+            "config": [
+              "FLOAT",
+              {
+                "default": 6,
+                "min": 0,
+                "max": 1000,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 125,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 201,
+          "widget": {
+            "name": "width",
+            "config": [
+              "INT",
+              {
+                "default": 1024,
+                "min": 0,
+                "max": 8192
+              }
+            ]
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 203,
+          "widget": {
+            "name": "height",
+            "config": [
+              "INT",
+              {
+                "default": 1024,
+                "min": 0,
+                "max": 8192
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            103
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Refiner)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXLRefiner"
+      },
+      "widgets_values": [
+        6,
+        4096,
+        4096,
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 80,
+      "type": "Evaluate Floats",
+      "pos": [
+        1646,
+        1387
+      ],
+      "size": [
+        315,
+        194
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "FLOAT",
+          "link": 107,
+          "widget": {
+            "name": "a",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        },
+        {
+          "name": "b",
+          "type": "FLOAT",
+          "link": 108,
+          "widget": {
+            "name": "b",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            201,
+            202
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Scale Width",
+      "properties": {
+        "Node name for S&R": "Evaluate Floats"
+      },
+      "widgets_values": [
+        "a * b",
+        "False",
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 81,
+      "type": "Evaluate Floats",
+      "pos": [
+        1646,
+        1427
+      ],
+      "size": {
+        "0": 315,
+        "1": 194
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "FLOAT",
+          "link": 109,
+          "widget": {
+            "name": "a",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        },
+        {
+          "name": "b",
+          "type": "FLOAT",
+          "link": 110,
+          "widget": {
+            "name": "b",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            203,
+            204
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Scale Height",
+      "properties": {
+        "Node name for S&R": "Evaluate Floats"
+      },
+      "widgets_values": [
+        "a * b",
+        "False",
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "type": "CLIPTextEncodeSDXL",
+      "pos": [
+        383,
+        1231
+      ],
+      "size": [
+        221.43727187479817,
+        380.4011805510718
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 186,
+          "slot_index": 0
+        },
+        {
+          "name": "text_g",
+          "type": "STRING",
+          "link": 6,
+          "widget": {
+            "name": "text_g",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_G"
+              }
+            ]
+          },
+          "slot_index": 1
+        },
+        {
+          "name": "text_l",
+          "type": "STRING",
+          "link": 7,
+          "widget": {
+            "name": "text_l",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_L"
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            14
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Base)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXL"
+      },
+      "widgets_values": [
+        4096,
+        4096,
+        0,
+        0,
+        4096,
+        4096,
+        "CLIP_G",
+        "CLIP_L"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 112,
+      "type": "CLIPTextEncodeSDXL",
+      "pos": [
+        614,
+        1233
+      ],
+      "size": {
+        "0": 210,
+        "1": 218
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 197
+        },
+        {
+          "name": "text_g",
+          "type": "STRING",
+          "link": 193,
+          "widget": {
+            "name": "text_g",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_G"
+              }
+            ]
+          }
+        },
+        {
+          "name": "text_l",
+          "type": "STRING",
+          "link": 194,
+          "widget": {
+            "name": "text_l",
+            "config": [
+              "STRING",
+              {
+                "multiline": true,
+                "default": "CLIP_L"
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            196
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Base)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXL"
+      },
+      "widgets_values": [
+        4096,
+        4096,
+        0,
+        0,
+        4096,
+        4096,
+        "CLIP_G",
+        "CLIP_L"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 78,
+      "type": "CLIPTextEncodeSDXLRefiner",
+      "pos": [
+        833,
+        1231
+      ],
+      "size": [
+        218.39999389648438,
+        173.45901161382994
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 185,
+          "slot_index": 0
+        },
+        {
+          "name": "ascore",
+          "type": "FLOAT",
+          "link": 188,
+          "widget": {
+            "name": "ascore",
+            "config": [
+              "FLOAT",
+              {
+                "default": 6,
+                "min": 0,
+                "max": 1000,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 93,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            175
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Refiner)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXLRefiner"
+      },
+      "widgets_values": [
+        6,
+        4096,
+        4096,
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 3,
+      "type": "CLIPTextEncodeSDXLRefiner",
+      "pos": [
+        833,
+        1441
+      ],
+      "size": [
+        218.39999389648438,
+        169.73998317245605
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 183
+        },
+        {
+          "name": "ascore",
+          "type": "FLOAT",
+          "link": 187,
+          "widget": {
+            "name": "ascore",
+            "config": [
+              "FLOAT",
+              {
+                "default": 6,
+                "min": 0,
+                "max": 1000,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 12,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            174
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Refiner)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXLRefiner"
+      },
+      "widgets_values": [
+        1,
+        4096,
+        4096,
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 4,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        381.2484446748712,
+        1649.3199014179422
+      ],
+      "size": [
+        315,
+        334
+      ],
+      "flags": {},
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 18
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 14
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 196
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 31
+        },
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "link": 216,
+          "widget": {
+            "name": "noise_seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 46,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 190,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "link": 86,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "end_at_step",
+          "type": "INT",
+          "link": 48,
+          "widget": {
+            "name": "end_at_step",
+            "config": [
+              "INT",
+              {
+                "default": 10000,
+                "min": 0,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 84,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            170,
+            173
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Base Model",
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "enable",
+        334271885732748,
+        "randomize",
+        20,
+        7.5,
+        "ddim",
+        "ddim_uniform",
+        0,
+        10000,
+        "enable"
+      ]
+    },
+    {
+      "id": 143,
+      "type": "Text to Number",
+      "pos": [
+        1646,
+        1703
+      ],
+      "size": {
+        "0": 140,
+        "1": 26
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 71,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 217
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NUMBER",
+          "type": "NUMBER",
+          "links": [
+            218
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed to Number",
+      "properties": {
+        "Node name for S&R": "Text to Number"
+      }
+    },
+    {
+      "id": 84,
+      "type": "Evaluate Floats",
+      "pos": [
+        1646,
+        1507
+      ],
+      "size": [
+        315,
+        194
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "FLOAT",
+          "link": 118,
+          "widget": {
+            "name": "a",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            226
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Convert Seed",
+      "properties": {
+        "Node name for S&R": "Evaluate Floats"
+      },
+      "widgets_values": [
+        "a if a >= 0 else a * -1",
+        "False",
+        721888757315275,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 147,
+      "type": "Evaluate Integers",
+      "pos": [
+        1646,
+        1624
+      ],
+      "size": {
+        "0": 210,
+        "1": 194
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 227,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -48000,
+                "max": 48000,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            256
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Seed Int to String",
+      "properties": {
+        "Node name for S&R": "Evaluate Integers"
+      },
+      "widgets_values": [
+        "a",
+        "False",
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 5,
+      "type": "UltimateSDUpscale",
+      "pos": [
+        1421.2106086170322,
+        1387.2780711501425
+      ],
+      "size": [
+        210,
+        514
+      ],
+      "flags": {},
+      "order": 79,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 30
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 102
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 103
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 104
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 105
+        },
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 106
+        },
+        {
+          "name": "upscale_by",
+          "type": "FLOAT",
+          "link": 116,
+          "widget": {
+            "name": "upscale_by",
+            "config": [
+              "FLOAT",
+              {
+                "default": 2,
+                "min": 0.05,
+                "max": 4,
+                "step": 0.05
+              }
+            ]
+          },
+          "slot_index": 6
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 232,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 117,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000,
+                "step": 1
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 122,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100
+              }
+            ]
+          }
+        },
+        {
+          "name": "sampler_name",
+          "type": "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2",
+          "link": 120,
+          "widget": {
+            "name": "sampler_name",
+            "config": [
+              [
+                "euler",
+                "euler_ancestral",
+                "heun",
+                "dpm_2",
+                "dpm_2_ancestral",
+                "lms",
+                "dpm_fast",
+                "dpm_adaptive",
+                "dpmpp_2s_ancestral",
+                "dpmpp_sde",
+                "dpmpp_sde_gpu",
+                "dpmpp_2m",
+                "dpmpp_2m_sde",
+                "dpmpp_2m_sde_gpu",
+                "ddim",
+                "uni_pc",
+                "uni_pc_bh2"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "normal,karras,exponential,simple,ddim_uniform",
+          "link": 121,
+          "widget": {
+            "name": "scheduler",
+            "config": [
+              [
+                "normal",
+                "karras",
+                "exponential",
+                "simple",
+                "ddim_uniform"
+              ]
+            ]
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 127,
+          "widget": {
+            "name": "denoise",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            98
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltimateSDUpscale"
+      },
+      "widgets_values": [
+        4,
+        611470633957283,
+        "randomize",
+        30,
+        6,
+        "dpmpp_2m_sde_gpu",
+        "karras",
+        0.4,
+        "Chess",
+        1024,
+        1024,
+        16,
+        64,
+        "None",
+        1,
+        64,
+        8,
+        16
+      ]
+    },
+    {
+      "id": 144,
+      "type": "Number to Int",
+      "pos": [
+        1646,
+        1741
+      ],
+      "size": {
+        "0": 140,
+        "1": 26
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 76,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "number",
+          "type": "NUMBER",
+          "link": 218
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            232
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed to Int",
+      "properties": {
+        "Node name for S&R": "Number to Int"
+      }
+    },
+    {
+      "id": 156,
+      "type": "Text to Number",
+      "pos": [
+        2467,
+        1810.2753117349464
+      ],
+      "size": {
+        "0": 140,
+        "1": 26
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 73,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 242
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NUMBER",
+          "type": "NUMBER",
+          "links": [
+            243
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed to Number",
+      "properties": {
+        "Node name for S&R": "Text to Number"
+      }
+    },
+    {
+      "id": 157,
+      "type": "Number to Int",
+      "pos": [
+        2467,
+        1848.2753117349469
+      ],
+      "size": {
+        "0": 140,
+        "1": 26
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 77,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "number",
+          "type": "NUMBER",
+          "link": 243
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed to Int",
+      "properties": {
+        "Node name for S&R": "Number to Int"
+      }
+    },
+    {
+      "id": 159,
+      "type": "Evaluate Integers",
+      "pos": [
+        2467,
+        1731.275311734946
+      ],
+      "size": {
+        "0": 210,
+        "1": 194
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 246,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -48000,
+                "max": 48000,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            259
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Seed Int to String",
+      "properties": {
+        "Node name for S&R": "Evaluate Integers"
+      },
+      "widgets_values": [
+        "a",
+        "False",
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 98,
+      "type": "Evaluate Floats",
+      "pos": [
+        2467,
+        1477
+      ],
+      "size": {
+        "0": 315,
+        "1": 194
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "FLOAT",
+          "link": 141,
+          "widget": {
+            "name": "a",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            142,
+            248
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Convert Seed",
+      "properties": {
+        "Node name for S&R": "Evaluate Floats"
+      },
+      "widgets_values": [
+        "a if a >= 0 else a * -1",
+        "False",
+        721888757315275,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 158,
+      "type": "Evaluate Integers",
+      "pos": [
+        2467,
+        1692
+      ],
+      "size": {
+        "0": 210,
+        "1": 194
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 248,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -48000,
+                "max": 48000,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            260
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Seed Int to String",
+      "properties": {
+        "Node name for S&R": "Evaluate Integers"
+      },
+      "widgets_values": [
+        "a",
+        "False",
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 110,
+      "type": "Evaluate Strings",
+      "pos": [
+        2467,
+        1650
+      ],
+      "size": {
+        "0": 315,
+        "1": 154
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 74,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "b",
+          "type": "STRING",
+          "link": 252,
+          "widget": {
+            "name": "b",
+            "config": [
+              "STRING",
+              {
+                "default": " World",
+                "multiline": false
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            168
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Hires. Fix Save Prefix",
+      "properties": {
+        "Node name for S&R": "Evaluate Strings"
+      },
+      "widgets_values": [
+        "a + b",
+        "False",
+        "hiresfix_",
+        " World",
+        ""
+      ]
+    },
+    {
+      "id": 73,
+      "type": "Evaluate Floats",
+      "pos": [
+        921.248444674869,
+        2072
+      ],
+      "size": [
+        315,
+        194
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "FLOAT",
+          "link": 66,
+          "widget": {
+            "name": "a",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            68,
+            216,
+            227,
+            246
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            162
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Convert Seed",
+      "properties": {
+        "Node name for S&R": "Evaluate Floats"
+      },
+      "widgets_values": [
+        "a if a >= 0 else a * -1",
+        "False",
+        721888757315275,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 9,
+      "type": "Text box",
+      "pos": [
+        336.6924986768613,
+        424
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            126,
+            159,
+            193,
+            194
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Negative Prompt",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "Deformed, unrealistic, bad quality, grainy, noisy, plastic, hazy, low contrast"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 146,
+      "type": "Evaluate Integers",
+      "pos": [
+        1646,
+        1585
+      ],
+      "size": [
+        210,
+        194
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 226,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": -48000,
+                "max": 48000,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            257
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Seed Int to String",
+      "properties": {
+        "Node name for S&R": "Evaluate Integers"
+      },
+      "widgets_values": [
+        "a",
+        "False",
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 108,
+      "type": "Evaluate Strings",
+      "pos": [
+        1646,
+        1545
+      ],
+      "size": {
+        "0": 315,
+        "1": 154
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 72,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "b",
+          "type": "STRING",
+          "link": 254,
+          "widget": {
+            "name": "b",
+            "config": [
+              "STRING",
+              {
+                "default": " World",
+                "multiline": false
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            169
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Ultimate SD Save Prefix",
+      "properties": {
+        "Node name for S&R": "Evaluate Strings"
+      },
+      "widgets_values": [
+        "a + b",
+        "False",
+        "ultimatesd_",
+        " World",
+        ""
+      ]
+    },
+    {
+      "id": 142,
+      "type": "Text Input Switch",
+      "pos": [
+        1646,
+        1665
+      ],
+      "size": {
+        "0": 178,
+        "1": 66
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 67,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "link": 256
+        },
+        {
+          "name": "text_b",
+          "type": "STRING",
+          "link": 257
+        },
+        {
+          "name": "boolean_number",
+          "type": "NUMBER",
+          "link": 219,
+          "slot_index": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            217,
+            254
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed Switch",
+      "properties": {
+        "Node name for S&R": "Text Input Switch"
+      }
+    },
+    {
+      "id": 155,
+      "type": "Text Input Switch",
+      "pos": [
+        2467,
+        1772
+      ],
+      "size": {
+        "0": 178,
+        "1": 66
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 68,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "link": 259
+        },
+        {
+          "name": "text_b",
+          "type": "STRING",
+          "link": 260
+        },
+        {
+          "name": "boolean_number",
+          "type": "NUMBER",
+          "link": 250,
+          "slot_index": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            242,
+            252
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Seed Switch",
+      "properties": {
+        "Node name for S&R": "Text Input Switch"
+      }
+    },
+    {
+      "id": 138,
+      "type": "Logic Boolean",
+      "pos": [
+        -16,
+        828
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "NUMBER",
+          "type": "NUMBER",
+          "links": [
+            219,
+            250
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Use txt2img Seed for All",
+      "properties": {
+        "Node name for S&R": "Logic Boolean"
+      },
+      "widgets_values": [
+        0
+      ]
+    },
+    {
+      "id": 43,
+      "type": "PrimitiveNode",
+      "pos": [
+        377,
+        828
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            66
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "a",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "title": "txt2img Seed",
+      "properties": {},
+      "widgets_values": [
+        721888757315275,
+        "increment"
+      ]
+    },
+    {
+      "id": 47,
+      "type": "PrimitiveNode",
+      "pos": [
+        1420.2106086170322,
+        826.2780711501551
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            118
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "a",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Ultimate SD Seed",
+      "properties": {},
+      "widgets_values": [
+        721888757315275,
+        "increment"
+      ]
+    },
+    {
+      "id": 86,
+      "type": "PrimitiveNode",
+      "pos": [
+        2231.8862617457353,
+        826.8368315312612
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            141
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "a",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Hires. Fix Seed",
+      "properties": {},
+      "widgets_values": [
+        721888757315275,
+        "increment"
+      ]
+    }
+  ],
+  "links": [
+    [
+      6,
+      7,
+      0,
+      2,
+      1,
+      "STRING"
+    ],
+    [
+      7,
+      8,
+      0,
+      2,
+      2,
+      "STRING"
+    ],
+    [
+      12,
+      7,
+      0,
+      3,
+      2,
+      "STRING"
+    ],
+    [
+      14,
+      2,
+      0,
+      4,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      18,
+      24,
+      0,
+      4,
+      0,
+      "MODEL"
+    ],
+    [
+      21,
+      23,
+      0,
+      22,
+      0,
+      "MODEL"
+    ],
+    [
+      25,
+      23,
+      2,
+      14,
+      1,
+      "VAE"
+    ],
+    [
+      26,
+      24,
+      2,
+      62,
+      1,
+      "VAE"
+    ],
+    [
+      30,
+      14,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ],
+    [
+      31,
+      63,
+      0,
+      4,
+      3,
+      "LATENT"
+    ],
+    [
+      40,
+      38,
+      0,
+      64,
+      1,
+      "FLOAT"
+    ],
+    [
+      45,
+      44,
+      0,
+      65,
+      0,
+      "INT"
+    ],
+    [
+      46,
+      65,
+      0,
+      4,
+      5,
+      "INT"
+    ],
+    [
+      47,
+      65,
+      1,
+      64,
+      0,
+      "FLOAT"
+    ],
+    [
+      48,
+      64,
+      0,
+      4,
+      8,
+      "INT"
+    ],
+    [
+      49,
+      26,
+      0,
+      68,
+      0,
+      "FLOAT"
+    ],
+    [
+      53,
+      64,
+      1,
+      68,
+      2,
+      "FLOAT"
+    ],
+    [
+      57,
+      65,
+      1,
+      68,
+      1,
+      "FLOAT"
+    ],
+    [
+      59,
+      64,
+      0,
+      70,
+      0,
+      "INT"
+    ],
+    [
+      60,
+      68,
+      0,
+      70,
+      1,
+      "INT"
+    ],
+    [
+      61,
+      70,
+      0,
+      22,
+      9,
+      "INT"
+    ],
+    [
+      66,
+      43,
+      0,
+      73,
+      0,
+      "FLOAT"
+    ],
+    [
+      68,
+      73,
+      0,
+      22,
+      4,
+      "INT"
+    ],
+    [
+      72,
+      37,
+      0,
+      75,
+      0,
+      "INT"
+    ],
+    [
+      76,
+      75,
+      0,
+      63,
+      0,
+      "INT"
+    ],
+    [
+      77,
+      25,
+      0,
+      76,
+      0,
+      "INT"
+    ],
+    [
+      78,
+      76,
+      0,
+      63,
+      1,
+      "INT"
+    ],
+    [
+      84,
+      45,
+      0,
+      4,
+      9,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      85,
+      45,
+      0,
+      22,
+      7,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      86,
+      39,
+      0,
+      4,
+      7,
+      "normal,karras,exponential,simple,ddim_uniform"
+    ],
+    [
+      87,
+      39,
+      0,
+      22,
+      8,
+      "normal,karras,exponential,simple,ddim_uniform"
+    ],
+    [
+      93,
+      7,
+      0,
+      78,
+      2,
+      "STRING"
+    ],
+    [
+      98,
+      5,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      102,
+      23,
+      0,
+      5,
+      1,
+      "MODEL"
+    ],
+    [
+      103,
+      52,
+      0,
+      5,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      104,
+      79,
+      0,
+      5,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      105,
+      23,
+      2,
+      5,
+      4,
+      "VAE"
+    ],
+    [
+      106,
+      6,
+      0,
+      5,
+      5,
+      "UPSCALE_MODEL"
+    ],
+    [
+      107,
+      41,
+      0,
+      80,
+      0,
+      "FLOAT"
+    ],
+    [
+      108,
+      75,
+      1,
+      80,
+      1,
+      "FLOAT"
+    ],
+    [
+      109,
+      41,
+      0,
+      81,
+      0,
+      "FLOAT"
+    ],
+    [
+      110,
+      76,
+      1,
+      81,
+      1,
+      "FLOAT"
+    ],
+    [
+      115,
+      41,
+      0,
+      82,
+      0,
+      "FLOAT"
+    ],
+    [
+      116,
+      82,
+      1,
+      5,
+      6,
+      "FLOAT"
+    ],
+    [
+      117,
+      35,
+      0,
+      5,
+      8,
+      "INT"
+    ],
+    [
+      118,
+      47,
+      0,
+      84,
+      0,
+      "FLOAT"
+    ],
+    [
+      120,
+      48,
+      0,
+      5,
+      10,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      121,
+      42,
+      0,
+      5,
+      11,
+      "normal,karras,exponential,simple,ddim_uniform"
+    ],
+    [
+      122,
+      36,
+      0,
+      5,
+      9,
+      "FLOAT"
+    ],
+    [
+      123,
+      57,
+      0,
+      52,
+      1,
+      "FLOAT"
+    ],
+    [
+      124,
+      56,
+      0,
+      79,
+      1,
+      "FLOAT"
+    ],
+    [
+      125,
+      7,
+      0,
+      52,
+      2,
+      "STRING"
+    ],
+    [
+      126,
+      9,
+      0,
+      79,
+      2,
+      "STRING"
+    ],
+    [
+      127,
+      55,
+      0,
+      5,
+      12,
+      "FLOAT"
+    ],
+    [
+      130,
+      23,
+      0,
+      49,
+      0,
+      "MODEL"
+    ],
+    [
+      132,
+      95,
+      0,
+      96,
+      0,
+      "IMAGE"
+    ],
+    [
+      133,
+      96,
+      0,
+      97,
+      0,
+      "IMAGE"
+    ],
+    [
+      134,
+      14,
+      0,
+      95,
+      1,
+      "IMAGE"
+    ],
+    [
+      135,
+      6,
+      0,
+      95,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      136,
+      23,
+      2,
+      97,
+      1,
+      "VAE"
+    ],
+    [
+      137,
+      97,
+      0,
+      49,
+      3,
+      "LATENT"
+    ],
+    [
+      138,
+      49,
+      0,
+      99,
+      0,
+      "LATENT"
+    ],
+    [
+      139,
+      23,
+      2,
+      99,
+      1,
+      "VAE"
+    ],
+    [
+      140,
+      99,
+      0,
+      58,
+      0,
+      "IMAGE"
+    ],
+    [
+      141,
+      86,
+      0,
+      98,
+      0,
+      "FLOAT"
+    ],
+    [
+      142,
+      98,
+      0,
+      49,
+      4,
+      "INT"
+    ],
+    [
+      143,
+      88,
+      0,
+      49,
+      5,
+      "INT"
+    ],
+    [
+      144,
+      89,
+      0,
+      49,
+      7,
+      "euler,euler_ancestral,heun,dpm_2,dpm_2_ancestral,lms,dpm_fast,dpm_adaptive,dpmpp_2s_ancestral,dpmpp_sde,dpmpp_sde_gpu,dpmpp_2m,dpmpp_2m_sde,dpmpp_2m_sde_gpu,ddim,uni_pc,uni_pc_bh2"
+    ],
+    [
+      145,
+      90,
+      0,
+      49,
+      8,
+      "normal,karras,exponential,simple,ddim_uniform"
+    ],
+    [
+      146,
+      91,
+      0,
+      49,
+      9,
+      "FLOAT"
+    ],
+    [
+      147,
+      92,
+      0,
+      49,
+      6,
+      "FLOAT"
+    ],
+    [
+      148,
+      100,
+      1,
+      96,
+      1,
+      "FLOAT"
+    ],
+    [
+      149,
+      87,
+      0,
+      100,
+      0,
+      "FLOAT"
+    ],
+    [
+      150,
+      75,
+      1,
+      103,
+      0,
+      "FLOAT"
+    ],
+    [
+      151,
+      87,
+      0,
+      103,
+      1,
+      "FLOAT"
+    ],
+    [
+      152,
+      103,
+      0,
+      101,
+      2,
+      "INT"
+    ],
+    [
+      153,
+      103,
+      0,
+      102,
+      2,
+      "INT"
+    ],
+    [
+      154,
+      76,
+      1,
+      105,
+      0,
+      "FLOAT"
+    ],
+    [
+      155,
+      87,
+      0,
+      105,
+      1,
+      "FLOAT"
+    ],
+    [
+      156,
+      105,
+      0,
+      101,
+      3,
+      "INT"
+    ],
+    [
+      157,
+      105,
+      0,
+      102,
+      3,
+      "INT"
+    ],
+    [
+      158,
+      7,
+      0,
+      101,
+      4,
+      "STRING"
+    ],
+    [
+      159,
+      9,
+      0,
+      102,
+      4,
+      "STRING"
+    ],
+    [
+      160,
+      93,
+      0,
+      101,
+      1,
+      "FLOAT"
+    ],
+    [
+      161,
+      94,
+      0,
+      102,
+      1,
+      "FLOAT"
+    ],
+    [
+      162,
+      73,
+      2,
+      106,
+      0,
+      "STRING"
+    ],
+    [
+      163,
+      106,
+      0,
+      107,
+      1,
+      "STRING"
+    ],
+    [
+      168,
+      110,
+      0,
+      58,
+      1,
+      "STRING"
+    ],
+    [
+      169,
+      108,
+      0,
+      12,
+      1,
+      "STRING"
+    ],
+    [
+      170,
+      4,
+      0,
+      62,
+      0,
+      "LATENT"
+    ],
+    [
+      171,
+      22,
+      0,
+      14,
+      0,
+      "LATENT"
+    ],
+    [
+      172,
+      14,
+      0,
+      107,
+      0,
+      "IMAGE"
+    ],
+    [
+      173,
+      4,
+      0,
+      22,
+      3,
+      "LATENT"
+    ],
+    [
+      174,
+      3,
+      0,
+      22,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      175,
+      78,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      176,
+      23,
+      1,
+      52,
+      0,
+      "CLIP"
+    ],
+    [
+      178,
+      23,
+      1,
+      101,
+      0,
+      "CLIP"
+    ],
+    [
+      179,
+      23,
+      1,
+      102,
+      0,
+      "CLIP"
+    ],
+    [
+      180,
+      101,
+      0,
+      49,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      181,
+      102,
+      0,
+      49,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      182,
+      23,
+      1,
+      79,
+      0,
+      "CLIP"
+    ],
+    [
+      183,
+      23,
+      1,
+      3,
+      0,
+      "CLIP"
+    ],
+    [
+      185,
+      23,
+      1,
+      78,
+      0,
+      "CLIP"
+    ],
+    [
+      186,
+      24,
+      1,
+      2,
+      0,
+      "CLIP"
+    ],
+    [
+      187,
+      46,
+      0,
+      3,
+      1,
+      "FLOAT"
+    ],
+    [
+      188,
+      27,
+      0,
+      78,
+      1,
+      "FLOAT"
+    ],
+    [
+      189,
+      34,
+      0,
+      22,
+      6,
+      "FLOAT"
+    ],
+    [
+      190,
+      40,
+      0,
+      4,
+      6,
+      "FLOAT"
+    ],
+    [
+      191,
+      65,
+      0,
+      22,
+      5,
+      "INT"
+    ],
+    [
+      192,
+      65,
+      0,
+      22,
+      10,
+      "INT"
+    ],
+    [
+      193,
+      9,
+      0,
+      112,
+      1,
+      "STRING"
+    ],
+    [
+      194,
+      9,
+      0,
+      112,
+      2,
+      "STRING"
+    ],
+    [
+      196,
+      112,
+      0,
+      4,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      197,
+      24,
+      1,
+      112,
+      0,
+      "CLIP"
+    ],
+    [
+      201,
+      80,
+      0,
+      52,
+      3,
+      "INT"
+    ],
+    [
+      202,
+      80,
+      0,
+      79,
+      3,
+      "INT"
+    ],
+    [
+      203,
+      81,
+      0,
+      52,
+      4,
+      "INT"
+    ],
+    [
+      204,
+      81,
+      0,
+      79,
+      4,
+      "INT"
+    ],
+    [
+      216,
+      73,
+      0,
+      4,
+      4,
+      "INT"
+    ],
+    [
+      217,
+      142,
+      0,
+      143,
+      0,
+      "STRING"
+    ],
+    [
+      218,
+      143,
+      0,
+      144,
+      0,
+      "NUMBER"
+    ],
+    [
+      219,
+      138,
+      0,
+      142,
+      2,
+      "NUMBER"
+    ],
+    [
+      226,
+      84,
+      0,
+      146,
+      0,
+      "INT"
+    ],
+    [
+      227,
+      73,
+      0,
+      147,
+      0,
+      "INT"
+    ],
+    [
+      232,
+      144,
+      0,
+      5,
+      7,
+      "INT"
+    ],
+    [
+      242,
+      155,
+      0,
+      156,
+      0,
+      "STRING"
+    ],
+    [
+      243,
+      156,
+      0,
+      157,
+      0,
+      "NUMBER"
+    ],
+    [
+      246,
+      73,
+      0,
+      159,
+      0,
+      "INT"
+    ],
+    [
+      248,
+      98,
+      0,
+      158,
+      0,
+      "INT"
+    ],
+    [
+      250,
+      138,
+      0,
+      155,
+      2,
+      "NUMBER"
+    ],
+    [
+      252,
+      155,
+      0,
+      110,
+      0,
+      "STRING"
+    ],
+    [
+      254,
+      142,
+      0,
+      108,
+      0,
+      "STRING"
+    ],
+    [
+      256,
+      147,
+      2,
+      142,
+      0,
+      "STRING"
+    ],
+    [
+      257,
+      146,
+      2,
+      142,
+      1,
+      "STRING"
+    ],
+    [
+      259,
+      159,
+      2,
+      155,
+      0,
+      "STRING"
+    ],
+    [
+      260,
+      158,
+      2,
+      155,
+      1,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "txt2image Processing",
+      "bounding": [
+        348,
+        711,
+        961,
+        1479
+      ],
+      "color": "#88A"
+    },
+    {
+      "title": "Ultimate SD Upscale",
+      "bounding": [
+        1390,
+        711,
+        732,
+        1477
+      ],
+      "color": "#8AA"
+    },
+    {
+      "title": "Hires. Fix",
+      "bounding": [
+        2202,
+        711,
+        728,
+        1479
+      ],
+      "color": "#3f789e"
+    },
+    {
+      "title": "Models",
+      "bounding": [
+        -102,
+        1170,
+        381,
+        489
+      ],
+      "color": "#444"
+    },
+    {
+      "title": "Global Controls",
+      "bounding": [
+        -101,
+        711,
+        380,
+        378
+      ],
+      "color": "#b58b2a"
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
