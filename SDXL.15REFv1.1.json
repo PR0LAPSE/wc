@@ -951,7 +951,7 @@
         "Node name for S&R": "CheckpointLoaderSimple"
       },
       "widgets_values": [
-        "sdxl_base_pruned_no-ema.safetensors"
+        "sd_xl_base_0.9.safetensors"
       ]
     },
     {

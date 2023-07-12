@@ -157,7 +157,7 @@
         "Node name for S&R": "CheckpointLoaderSimple"
       },
       "widgets_values": [
-        "SDXL Refiner.safetensors"
+        "sd_xl_refiner_0.9.safetensors"
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -508,7 +508,7 @@
         "Node name for S&R": "CheckpointLoaderSimple"
       },
       "widgets_values": [
-        "SDXL Base.safetensors"
+        "sd_xl_base_0.9.safetensors"
       ],
       "color": "#432",
       "bgcolor": "#653"
