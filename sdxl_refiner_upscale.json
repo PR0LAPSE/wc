@@ -300,7 +300,7 @@
       "title": "Seed",
       "properties": {},
       "widgets_values": [
-        1080338331219427,
+        505247655748207,
         "randomize"
       ],
       "color": "#432",
@@ -1458,7 +1458,7 @@
       },
       "widgets_values": [
         "enable",
-        914908284784689,
+        1088816588527451,
         "fixed",
         25,
         7,
@@ -1677,7 +1677,7 @@
       },
       "widgets_values": [
         "disable",
-        914908284784689,
+        1088816588527451,
         "fixed",
         25,
         6,
@@ -1905,10 +1905,10 @@
         634,
         732
       ],
-      "size": [
-        533.523971339539,
-        546.7602703890627
-      ],
+      "size": {
+        "0": 533.5239868164062,
+        "1": 546.76025390625
+      },
       "flags": {
         "pinned": true
       },
@@ -1924,7 +1924,7 @@
       "title": "Save Upscaled Image",
       "properties": {},
       "widgets_values": [
-        "UpScaled\\Upscaled_SDXL09_"
+        "UpScaled/Upscaled_SDXL09_"
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -1936,10 +1936,10 @@
         1220,
         718
       ],
-      "size": [
-        499.40070577391384,
-        559.2014411327457
-      ],
+      "size": {
+        "0": 499.40069580078125,
+        "1": 559.201416015625
+      },
       "flags": {
         "pinned": true
       },
@@ -1955,7 +1955,7 @@
       "title": "Save Upscaled Image",
       "properties": {},
       "widgets_values": [
-        "UpScaled\\Upscaled_SDXL09_"
+        "UpScaled/Upscaled_SDXL09_"
       ],
       "color": "#232",
       "bgcolor": "#353"
