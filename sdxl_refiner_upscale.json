@@ -40,7 +40,7 @@
       "title": "Positive Prompt",
       "properties": {},
       "widgets_values": [
-        "ancient old man, near a runestone, with a staff in his hands, a druid, a long gray beard, standing in a forest"
+        "ancient old druid with long gray beard, near a runestone, with a staff in his hands, standing in magical forest"
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -300,7 +300,7 @@
       "title": "Seed",
       "properties": {},
       "widgets_values": [
-        505247655748207,
+        17083040835917,
         "randomize"
       ],
       "color": "#432",
@@ -1062,7 +1062,7 @@
         0,
         4096,
         4096,
-        "ancient old man, near a runestone, with a staff in his hands, a druid, a long gray beard, standing in a forest",
+        "ancient old druid with long gray beard, near a runestone, with a staff in his hands, standing in magical forest",
         "cinematic, detailed photo, wide angle shot, realistic, 8k uhd, high quality"
       ]
     },
@@ -1458,7 +1458,7 @@
       },
       "widgets_values": [
         "enable",
-        1088816588527451,
+        1000941376974926,
         "fixed",
         25,
         7,
@@ -1677,7 +1677,7 @@
       },
       "widgets_values": [
         "disable",
-        1088816588527451,
+        1000941376974926,
         "fixed",
         25,
         6,
