@@ -509,7 +509,7 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "SDXL_0.9_Output_00001_.png",
+        "SDXL_Output_00001_.png",
         "image"
       ]
     },
@@ -844,7 +844,7 @@
       "title": "Save Image - Refined (Connect to R2)",
       "properties": {},
       "widgets_values": [
-        "SDXL_0.9_Output"
+        "SDXL_Output"
       ]
     },
     {
@@ -874,7 +874,7 @@
       "title": "Save Image - Base (Connect to B1)",
       "properties": {},
       "widgets_values": [
-        "SDXL.0.9.Base.Output"
+        "SDXL.Base.Output"
       ]
     },
     {
@@ -962,7 +962,7 @@
         "Node name for S&R": "CheckpointLoaderSimple"
       },
       "widgets_values": [
-        "sd_xl_base_0.9.safetensors"
+        "sd_xl_base_1.0.safetensors"
       ]
     },
     {
@@ -1055,7 +1055,7 @@
         "Node name for S&R": "CheckpointLoaderSimple"
       },
       "widgets_values": [
-        "sd_xl_refiner_0.9.safetensors"
+        "sd_xl_refiner_1.0.safetensors"
       ]
     },
     {
